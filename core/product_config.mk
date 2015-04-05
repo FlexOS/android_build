@@ -181,7 +181,7 @@ include $(BUILD_SYSTEM)/device.mk
 
 # A CM build needs only the CM product makefiles.
 ifneq ($(FLEX_BUILD),)
-  all_product_configs := $(shell ls vendor/flex/products/AndroidProducts.mk)
+  all_product_configs := $(shell ls vendor/flex/products/$(FLEX_BUILD).mk)
 else
   ifneq ($(strip $(TARGET_BUILD_APPS)),)
   # An unbundled app build needs only the core product makefiles.

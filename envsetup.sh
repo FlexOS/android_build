@@ -1986,6 +1986,7 @@ function installrecovery()
         echo "Installation complete."
     else
         echo "The connected device does not appear to be $FLEX_BUILD, run away!"
+    fi
 }
 
 function mka() {
