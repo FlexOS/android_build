@@ -29,6 +29,8 @@ PRODUCT_PACKAGES += \
     DeskClock \
     DocumentsUI \
     DownloadProviderUi \
+    Email \
+    Exchange2 \
     ExternalStorageProvider \
     FusedLocation \
     InputDevices \
