@@ -1700,13 +1700,6 @@ bacon: otapackage
 	$(hide) $(MD5SUM) $(FLEX_TARGET_PACKAGE) > $(FLEX_TARGET_PACKAGE).md5sum
 	@echo -e ${CL_CYN}"Package Complete: $(FLEX_TARGET_PACKAGE)"${CL_RST}
 
-ifeq ($(USE_PREBUILT_CHROMIUM),1)
-ifneq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
-	@echo "Running Chromium prebuilt setup script..."
-	$(hide) . $(TOPDIR)vendor/flex/utils/chromium_prebuilt.sh $(TOP)
-endif
-endif
-
 endif    # recovery_fstab is defined
 endif    # TARGET_NO_KERNEL != true
 endif    # TARGET_DEVICE != generic*
