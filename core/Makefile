@@ -1706,9 +1706,9 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
 
 FLEX_TARGET_PACKAGE := $(PRODUCT_OUT)/$(FLEX_VERSION).zip
 
-.PHONY: otapackage bacon
+.PHONY: otapackage flex
 otapackage: $(INTERNAL_OTA_PACKAGE_TARGET)
-bacon: otapackage
+flex: otapackage
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(FLEX_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(FLEX_TARGET_PACKAGE) > $(FLEX_TARGET_PACKAGE).md5sum
 	@echo -e ${CL_CYN}"Package Complete: $(FLEX_TARGET_PACKAGE)"${CL_RST}
